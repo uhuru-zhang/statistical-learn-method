@@ -14,12 +14,6 @@ class Perceptron(object):
         self.bia = numpy.random.random_sample()
 
     def train(self, train_set, test_set, ela, epochs=20):
-        e = 0
-        for x, y in test_set:
-            if not validate(self.weight, self.bia, x, y):
-                e += 1
-        print("epochs: {}, {:.2f}".format("begin", 1 - (1.0 * e / len(test_set))))
-
         for i in range(epochs):
 
             e_t = 0
